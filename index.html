@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-AI Genie - Smart Event Planner</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-magic"></i>
+                    <h1>Event-AI Genie</h1>
+                </div>
+                <p class="tagline">Your Smart Event Planning Assistant</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Event Planning Form -->
+            <section class="form-section">
+                <div class="form-card">
+                    <h2><i class="fas fa-calendar-alt"></i> Plan Your Perfect Event</h2>
+                    <form id="eventForm" class="event-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="eventType">
+                                    <i class="fas fa-star"></i> Event Type
+                                </label>
+                                <select id="eventType" name="eventType" required>
+                                    <option value="">Select Event Type</option>
+                                    <option value="wedding">Wedding</option>
+                                    <option value="party">Party</option>
+                                    <option value="conference">Conference</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">
+                                    <i class="fas fa-map-marker-alt"></i> Location
+                                </label>
+                                <select id="location" name="location" required>
+                                    <option value="">Select Location</option>
+                                    <option value="bangalore">Bangalore</option>
+                                    <option value="mumbai">Mumbai</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="budget">
+                                    <i class="fas fa-rupee-sign"></i> Budget (₹)
+                                </label>
+                                <input type="number" id="budget" name="budget" placeholder="Enter your budget" min="10000" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="guests">
+                                    <i class="fas fa-users"></i> Number of Guests
+                                </label>
+                                <input type="number" id="guests" name="guests" placeholder="Expected guests" min="10" required>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-wand-magic-sparkles"></i>
+                            Generate Event Plan
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="results-section hidden">
+                <!-- Recommended Vendors -->
+                <div class="results-card">
+                    <h3><i class="fas fa-handshake"></i> Recommended Vendors</h3>
+                    <div id="vendorsContainer" class="vendors-grid">
+                        <!-- Vendor cards will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Event Timeline -->
+                <div class="results-card">
+                    <h3><i class="fas fa-clock"></i> Event Timeline</h3>
+                    <div id="timelineContainer" class="timeline">
+                        <!-- Timeline steps will be inserted here -->
+                    </div>
+                </div>
+
+                <!-- Budget Summary -->
+                <div class="results-card">
+                    <h3><i class="fas fa-chart-pie"></i> Budget Summary</h3>
+                    <div id="budgetContainer" class="budget-summary">
+                        <!-- Budget breakdown will be inserted here -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Event-AI Genie. Making events magical with AI.</p>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
